@@ -50,7 +50,10 @@ body {
   text-transform: uppercase;
 }
 // elements
-
+h1,
+h1 {
+  margin: 0;
+}
 .button {
   color: $invertedText;
   background: $detailsColor;
@@ -71,23 +74,23 @@ body {
 
 .h1 {
   font-family: $h1Font;
-  font-size: 60px;
+  font-size: $h1;
   line-height: 75px;
 }
 
 .h2 {
   font-family: $h2Font;
-  font-size: 63px;
+  font-size: $h2;
 }
 // HEADER
 .header {
-  background: url(../img/header-bg.png) left -205px center no-repeat,
-    url(../img/header-bg.png) right -160px center no-repeat, $bgDark;
+  background: url(../img/header-bg-left.png) left -190px top 135px no-repeat,
+    url(../img/header-bg-right.png) right -165px top 135px no-repeat, $bgDark;
 
   &-bar {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 165px;
+    margin-bottom: 84px;
     padding-top: 43px;
   }
 
@@ -95,7 +98,7 @@ body {
     padding-left: 5px;
     transition: all 0.1s ease-in;
 
-    &:hover{
+    &:hover {
       transform: scale(1.02);
     }
   }
@@ -135,30 +138,67 @@ body {
         transition: all 0.3s ease-in;
       }
 
-      &:hover {
+      &:hover,
+      &--active {
         color: $highlightedText;
       }
 
-      &:hover:after {
+      &:hover:after,
+      &--active:after {
         opacity: 1;
       }
     }
   }
 
   &-main {
+    display: flex;
+    padding-bottom: 132px;
     &__text {
     }
 
     &__title {
+      margin-top: 80px;
+      margin-bottom: 39px;
+      text-transform: capitalize;
     }
 
     &__paragraph {
+      color: $mostDarkText;
+      width: 90%;
+      margin-bottom: 49px;
     }
 
     &__button {
     }
 
-    &__img {
+    &__img-box {
+      background: radial-gradient(52% 55% ellipse at 50% 50%, #fff, transparent);
+      position: relative;
+      z-index: 5;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 57%;
+        transform: translateX(-50%);
+        bottom: -31px;
+        width: 175%;
+        height: 18%;
+        background: radial-gradient(100% 100% ellipse at 50% 50%,
+      rgba(255,255,255, 0.8),rgba(255,255,255, 0.8) 21%, rgba(255,255,255, 0.6) 21%, rgba(255,255,255, 0.6) 30%, rgba(255,255,255, 0.4) 30%, rgba(255,255,255, 0.4) 40%, rgba(255,255,255, 0.2) 40%, rgba(255,255,255, 0.2) 50%, transparent 50%);
+        z-index: -5;
+      }
+
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../img/header-duck-shaddow.png) left 80% bottom no-repeat;
+        z-index: 5;
+      }
     }
 
     &__image {
