@@ -82,7 +82,7 @@ h1 {
   font-family: $h2Font;
   font-size: $h2;
 }
-// HEADER
+// --HEADER
 .header {
   background: url(../img/header-bg-left.png) left -190px top 135px no-repeat,
     url(../img/header-bg-right.png) right -165px top 135px no-repeat, $bgDark;
@@ -152,7 +152,7 @@ h1 {
 
   &-main {
     display: flex;
-    padding-bottom: 132px;
+    padding-bottom: 92px;
     &__text {
     }
 
@@ -184,13 +184,25 @@ h1 {
         bottom: -31px;
         width: 175%;
         height: 18%;
-        background: radial-gradient(100% 100% ellipse at 50% 50%,
-      rgba(255,255,255, 0.8),rgba(255,255,255, 0.8) 21%, rgba(255,255,255, 0.6) 21%, rgba(255,255,255, 0.6) 30%, rgba(255,255,255, 0.4) 30%, rgba(255,255,255, 0.4) 40%, rgba(255,255,255, 0.2) 40%, rgba(255,255,255, 0.2) 50%, transparent 50%);
+        background: radial-gradient(
+          100% 100% ellipse at 50% 50%,
+          rgba(255, 255, 255, 0.9),
+          rgba(255, 255, 255, 0.9) 21%,
+          rgba(255, 255, 255, 0.7) 21%,
+          rgba(255, 255, 255, 0.7) 28%,
+          rgba(255, 255, 255, 0.5) 28%,
+          rgba(255, 255, 255, 0.5) 35%,
+          rgba(255, 255, 255, 0.3) 25%,
+          rgba(255, 255, 255, 0.3) 42%,
+          rgba(255, 255, 255, 0.1) 42%,
+          rgba(255, 255, 255, 0.1) 49%,
+          transparent 49%
+        );
         z-index: -5;
       }
 
-      &:after{
-        content: '';
+      &:after {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -202,8 +214,154 @@ h1 {
     }
 
     &__image {
+      display: block;
     }
   }
 }
+// --/HEADER
+
+// --MAIN
+// ----MAIN-PRODUCTS
+
+.product {
+  background: url(../img/product-bg-left.png) left -70px top -80px no-repeat,
+    url(../img/product-bg-right.png) right top no-repeat, $bgTransparent;
+  &-header {
+    text-align: center;
+    margin-bottom: 45px;
+    font-family: $h2Font;
+    position: relative;
+
+    &__title {
+      color: $highlightedText;
+      font-size: 175px;
+      font-weight: 700;
+      line-height: 170px;
+      opacity: 0.04;
+      text-transform: capitalize;
+    }
+
+    &__stages {
+      color: $highlightedText;
+      font-size: 63px;
+      font-weight: 700;
+      position: absolute;
+      width: 100%;
+      background: rgba(255, 0, 0, 0.2);
+      bottom: 70px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 4px;
+        background: $highlightedText;
+      }
+    }
+    &__stage {
+      &--left {
+        position: absolute;
+        left: 10px;
+        top: -16px;
+        transform: rotate(-90deg);
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -38px;
+          transform: translateX(-50%);
+          height: 4px;
+          width: 40px;
+          background-color: $highlightedText;
+          border-radius: 2px;
+        }
+      }
+      &--center {
+        position: absolute;
+        left: 50%;
+        bottom: 18px;
+        transform: translateX(-50%);
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -26px;
+          transform: translateX(-50%);
+          height: 20px;
+          width: 4px;
+          background-color: $highlightedText;
+          border-radius: 2px;
+        }
+      }
+      &--right {
+        position: absolute;
+        right: 10px;
+        top: -16px;
+        transform: rotate(-90deg);
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: -33px;
+          transform: translateX(-50%);
+          height: 4px;
+          width: 40px;
+          background-color: $highlightedText;
+          border-radius: 2px;
+        }
+      }
+    }
+    &__circle {
+      color: $mainText;
+      font-size: 26px;
+      font-weight: 300;
+      text-transform: capitalize;
+    }
+  }
+
+  &-img-area {
+    display: flex;
+    justify-content: space-between;
+
+    &__box {
+    }
+
+    &__image {
+    }
+  }
+
+  &-cards {
+  }
+
+  &-card {
+    &__header {
+    }
+
+    &__number {
+    }
+
+    &__title {
+    }
+
+    &__content {
+    }
+  }
+}
+// ----/MAIN-PRODUCTS
+// ----MAIN-PRODUCTS
+
+// ----/MAIN-PRODUCTS
+// ----MAIN-PRODUCTS
+
+// ----/MAIN-PRODUCTS
+// ----MAIN-PRODUCTS
+
+// ----/MAIN-PRODUCTS
 
 @import "media";
