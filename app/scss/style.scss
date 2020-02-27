@@ -30,7 +30,6 @@ li {
 body {
   font-size: $text;
   font-family: $textFont;
-  line-height: $lineHeight;
   background-color: blue;
 }
 
@@ -157,6 +156,7 @@ h1 {
     }
 
     &__title {
+      line-height: 75px;
       margin-top: 80px;
       margin-bottom: 39px;
       text-transform: capitalize;
@@ -164,8 +164,9 @@ h1 {
 
     &__paragraph {
       color: $mostDarkText;
+      margin-bottom: 65px;
       width: 90%;
-      margin-bottom: 49px;
+      line-height: 26px;
     }
 
     &__button {
@@ -326,13 +327,13 @@ h1 {
       left: 50%;
       bottom: -13px;
       transform: translateX(-50%);
-
     }
   }
 
   &-img-area {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
 
     &__box {
       display: flex;
@@ -341,23 +342,50 @@ h1 {
     }
 
     &__image {
+      display: block;
     }
   }
 
   &-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 160px;
+  }
+  &-card:nth-of-type(n+1) {
+    padding-right: 30px;
   }
 
   &-card {
+    flex-basis: 50%;
+    margin-bottom: 87px;
+
     &__header {
+      color: $highlightedText;
+      background: url(../img/product-header-bg.png) left 0% bottom 0% no-repeat;
+      font-family: $h2Font;
+      padding-bottom: 17px;
+      margin-bottom: 28px;
+      position: relative;
     }
 
     &__number {
+      font-size: 163px;
+      font-weight: 700;
+      opacity: 0.04;
+      position: absolute;
+      left: 0;
+      bottom: -50%;
     }
 
     &__title {
+      font-size: 63px;
+      font-weight: 700;
+      text-transform: capitalize;
     }
 
     &__content {
+      color: $darkerText;
+      line-height: 30px;
     }
   }
 }
