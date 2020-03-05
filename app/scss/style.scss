@@ -50,7 +50,7 @@ body {
 }
 // elements
 h1,
-h1 {
+h2 {
   margin: 0;
 }
 .button {
@@ -63,12 +63,17 @@ h1 {
   font-weight: 700;
   padding: 23px 50px 21px;
   text-transform: capitalize;
+
+  &:hover {
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .h1,
 .h2 {
   color: $highlightedText;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .h1 {
@@ -248,8 +253,7 @@ h1 {
       font-weight: 700;
       position: absolute;
       width: 100%;
-      background: rgba(255, 0, 0, 0.2);
-      bottom: 70px;
+      bottom: 50px;
 
       &:before {
         content: "";
@@ -265,8 +269,8 @@ h1 {
     &__stage {
       &--left {
         position: absolute;
-        left: 10px;
-        top: -16px;
+        left: -10px;
+        top: -36px;
         transform: rotate(-90deg);
 
         &:before {
@@ -301,8 +305,8 @@ h1 {
       }
       &--right {
         position: absolute;
-        right: 10px;
-        top: -16px;
+        right: -10px;
+        top: -36px;
         transform: rotate(-90deg);
 
         &:before {
@@ -349,9 +353,8 @@ h1 {
   &-cards {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 160px;
   }
-  &-card:nth-of-type(n+1) {
+  &-card:nth-of-type(n + 1) {
     padding-right: 30px;
   }
 
@@ -378,26 +381,134 @@ h1 {
     }
 
     &__title {
-      font-size: 63px;
-      font-weight: 700;
-      text-transform: capitalize;
     }
 
     &__content {
       color: $darkerText;
       line-height: 30px;
+      margin-bottom: 80px;
     }
   }
 }
 // ----/MAIN-PRODUCTS
-// ----MAIN-PRODUCTS
+// ----MAIN-SUBSCRIBE
+.subscribe {
+  background: url(../img/subscribe-bg-left.png) left -14% top 50% no-repeat, url(../img/subscribe-bg-right.png) right -8% top 50% no-repeat,$bgDark;
 
-// ----/MAIN-PRODUCTS
-// ----MAIN-PRODUCTS
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+  }
 
-// ----/MAIN-PRODUCTS
-// ----MAIN-PRODUCTS
+  &-text-box {
+    flex-grow: 1;
+    margin-top: 110px;
+    text-align: center;
+  }
 
-// ----/MAIN-PRODUCTS
+  &-header {
+    margin-bottom: 46px;
+  }
+
+  &-text {
+    color: $darkerText;
+    font-size: 18px;
+    margin-bottom: 64px;
+  }
+  &-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-form__email {
+    background: $bgDark;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid $detailsColor;
+    width: 48%;
+  }
+
+  &-form__email::placeholder{
+    opacity: 0.32;
+    padding-left: 7px;
+    text-transform: capitalize;
+    transition: all 0.2s ease-in;
+   
+  }
+
+  &-form__email:hover::placeholder{
+    text-transform: capitalize;
+    opacity: 1;
+  }
+
+  &-form__submit {
+    background: url(../img/subscribe-paper-plane.webp) center center no-repeat, $detailsColor;
+    border: none;
+    cursor: pointer;
+    font-size: 0;
+    height: 46px;
+    width: 46px;
+     
+  }
+
+  &-img-box {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  &-image {
+  }
+}
+// ----/MAIN-SUBSCRIBE
+// ----MAIN-SLIDER
+.slider-image-box {
+  display: flex;
+}
+
+.slider-section {
+  background: $bgTransparent;
+}
+.slider {
+  &-slide {
+    display: flex;
+  }
+
+  &-image-box {
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+  }
+
+  &-image {
+    display: block;
+  }
+
+  &-text-box {
+  }
+
+  &-title {
+  }
+
+  &-rate {
+  }
+
+  &-text {
+  }
+
+  &-bold {
+  }
+
+  &-button {
+  }
+}
+
+// ----/MAIN-SLIDER
+// ----FOOTER
+
+// ----/FOOTER
 
 @import "media";
