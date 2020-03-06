@@ -393,7 +393,8 @@ h2 {
 // ----/MAIN-PRODUCTS
 // ----MAIN-SUBSCRIBE
 .subscribe {
-  background: url(../img/subscribe-bg-left.png) left -14% top 50% no-repeat, url(../img/subscribe-bg-right.png) right -8% top 50% no-repeat,$bgDark;
+  background: url(../img/subscribe-bg-left.png) left -14% top 50% no-repeat,
+    url(../img/subscribe-bg-right.png) right -8% top 50% no-repeat, $bgDark;
 
   &-inner {
     display: flex;
@@ -429,15 +430,14 @@ h2 {
     width: 48%;
   }
 
-  &-form__email::placeholder{
+  &-form__email::placeholder {
     opacity: 0.32;
     padding-left: 7px;
     text-transform: capitalize;
     transition: all 0.2s ease-in;
-   
   }
 
-  &-form__email:hover::placeholder{
+  &-form__email:hover::placeholder {
     text-transform: capitalize;
     opacity: 1;
   }
@@ -449,7 +449,6 @@ h2 {
     font-size: 0;
     height: 46px;
     width: 46px;
-     
   }
 
   &-img-box {
@@ -471,16 +470,19 @@ h2 {
 }
 .slider {
   &-slide {
+    position: relative;
+  }
+  &-slide-wrapper {
     display: flex;
   }
 
   &-image-box {
-    width: 400px;
-    height: 600px;
-    overflow: hidden;
     display: flex;
     justify-self: center;
     align-items: center;
+    margin-top: 50px;
+    max-width: 400px;
+    height: 600px;
   }
 
   &-image {
@@ -488,24 +490,60 @@ h2 {
   }
 
   &-text-box {
+    margin-top: 176px;
+    padding-left: 30px;
+    padding-right: 50px;
   }
 
   &-title {
+    margin-bottom: 40px;
   }
 
   &-rate {
+    color: $detailsColor;
+    border: 1px solid rgba($detailsColor, 0.2);
+    border-radius: 36px;
+    display: inline-block;
+    font-family: $h2Font;
+    font-size: 27px;
+    font-weight: 300;
+    padding: 13px 38px;
+    margin-bottom: 20px;
   }
-
-  &-text {
-  }
-
   &-bold {
+    font-size: 34px;
+    font-weight: 700;
+  }
+  &-text {
+    color: $darkerText;
+    line-height: 30px;
+    margin-bottom: 49px;
   }
 
   &-button {
   }
 }
+.slider .slick-dots {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.slider .slick-dots button {
+  cursor: pointer;
+  background: $detailsColor;
+  border: none;
+  border-radius: 50%;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  outline: none;
+}
 
+.slider .slick-dots .slick-active button {
+  background: $bgTransparent;
+  border: 2px solid $detailsColor;
+}
 // ----/MAIN-SLIDER
 // ----FOOTER
 
