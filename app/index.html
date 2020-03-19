@@ -31,7 +31,7 @@
                     </ul>
                 </nav>
             </div>
-            <div class="header-main">
+            <div class="header-main" id="headerMain">
                 <div class="header-main__text-box">
                     <h1 class="header-main__title h1">we bring <br>emotion to your<br> product</h1>
                     <p class="header-main__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -108,23 +108,14 @@
             </div>
         </section>
         <!-- /PRODUCTS -->
-        <!-- SUBSCRIBE -->
-        <section class="subscribe container-outer">
-            <div class="subscribe-inner container-inner">
-                <div class="subscribe-text-box">
-                    <h2 class="subscribe-header h2">subscribe</h2>
-                    <p class="subscribe-text">Join us for all the latest Petfinder news and updates.</p>
-                    <form class="subscribe-form">
-                        <input type="email" class="subscribe-form__email" placeholder="enter your email address">
-                        <input type="submit" class="subscribe-form__submit">
-                    </form>
-                </div>
-                <div class="subscribe-img-box">
-                    <img src="img/subsribe-image.png" alt="hatching duckling" class="subscribe-image">
+        <!-- PARALLAX -->
+        <section class="container-outer parallax-section">
+            <div class="container-inner">
+                <div class="parallax">
                 </div>
             </div>
         </section>
-        <!-- /SUBSCRIBE -->
+        <!-- /PARALLAX -->
         <!-- SLIDER -->
         <section class="container-outer slider-section">
             <div class="container-inner">
@@ -188,6 +179,23 @@
         </section>
 
         <!-- /SLIDER -->
+        <!-- SUBSCRIBE -->
+        <section class="subscribe container-outer">
+            <div class="subscribe-inner container-inner" id="subscribe">
+                <div class="subscribe-text-box">
+                    <h2 class="subscribe-header h2">subscribe</h2>
+                    <p class="subscribe-text">Join us for all the latest Petfinder news and updates.</p>
+                    <form class="subscribe-form">
+                        <input type="email" class="subscribe-form__email" placeholder="enter your email address">
+                        <input type="submit" class="subscribe-form__submit">
+                    </form>
+                </div>
+                <div class="subscribe-img-box">
+                    <img src="img/subsribe-image.png" alt="hatching duckling" class="subscribe-image">
+                </div>
+            </div>
+        </section>
+        <!-- /SUBSCRIBE -->
     </main>
     <footer class="footer container-outer">
         <div class="container-inner">
@@ -196,6 +204,8 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
